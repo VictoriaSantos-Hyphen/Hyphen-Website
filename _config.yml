@@ -1,0 +1,22 @@
+---
+# Jekyll Configuration for GitHub Pages
+
+# Site settings
+title: My Awesome Site
+description: This website is designed to be accessible and meet WCAG 2.2 standards.
+baseurl: ""  # the subpath of your site, e.g. /blog
+url: "https://example.com"  # the base hostname & protocol for your site
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Accessibility settings
+accessibility:
+  - ensure_color_contrast: true
+  - alt_text_for_images: true
+  - keyboard_navigation: true
+
+# Enable pagination
+paginate: 5
