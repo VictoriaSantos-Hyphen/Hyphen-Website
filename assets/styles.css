@@ -1,0 +1,186 @@
+/* =============================== */
+/*   ESTILO HYPHEN – WCAG REPORT   */
+/* =============================== */
+
+:root {
+    --bg: #F4EFE7;              /* Bege Hyphen */
+    --text: #1A1A1A;            /* Preto suave */
+    --text-light: #4A4A4A;      /* Cinza escuro */
+    --border: #767676;          /* Contraste 3:1 */
+    --accent: #D64545;          /* Vermelho Hyphen */
+    --accent-hover: #B83A3A;
+    --sidebar-width: 260px;
+    --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    color: var(--text);
+    background: var(--bg);
+    display: flex;
+    line-height: 1.7;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    padding: 40px 28px;
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    background: var(--bg);
+}
+
+.sidebar h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: var(--text);
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    padding: 6px 0;
+    border-left: 2px solid transparent;
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    color: var(--text);
+    border-left-color: var(--accent);
+}
+
+.subsection {
+    margin-top: 20px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.criterion-link {
+    margin-left: 18px;
+    font-size: 0.9rem;
+}
+
+/* MAIN CONTENT */
+main {
+    margin-left: var(--sidebar-width);
+    width: 100%;
+    background: var(--bg);
+}
+
+section {
+    padding: 80px 12%;
+    background: var(--bg);
+}
+
+/* HERO */
+.hero {
+    text-align: left;
+    padding: 140px 12% 100px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.hero h1 {
+    font-size: 3.4rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: var(--text-light);
+}
+
+/* HEADINGS */
+h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 25px;
+}
+
+/* CRITERIA BLOCKS */
+.criterion {
+    background: transparent;
+    border: 1px solid var(--border);
+    padding: 28px;
+    margin-bottom: 28px;
+}
+
+.criterion h4 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.criterion p {
+    margin: 8px 0;
+    color: var(--text-light);
+}
+
+.links {
+    margin-top: 14px;
+    display: flex;
+    gap: 16px;
+}
+
+.links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: 0.2s ease;
+}
+
+.links a:hover {
+    border-bottom: 1px solid var(--accent);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    text-align: left;
+    padding: 14px;
+    background: rgba(0,0,0,0.03);
+    border-bottom: 2px solid var(--border);
+    font-weight: 600;
+}
+
+table td {
+    padding: 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-light);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 50px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+}

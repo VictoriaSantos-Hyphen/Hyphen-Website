@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório de Auditoria – WCAG 2.2</title>
+
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+
+    <!-- ÍNDICE LATERAL COMPLETO -->
+    <aside class="sidebar">
+        <h3>Índice</h3>
+
+        <a href="#info">Informações</a>
+        <a href="#summary">Resumo</a>
+        <a href="#criteria">Critérios</a>
+
+        <!-- PRINCÍPIO 1 -->
+        <a class="subsection" href="#principio-1">Princípio 1 – Perceptível</a>
+        <a class="criterion-link" href="#criterio-1-1-1">1.1.1 Conteúdo Não Textual</a>
+        <a class="criterion-link" href="#criterio-1-2-1">1.2.1 Áudio-only e Vídeo-only</a>
+        <a class="criterion-link" href="#criterio-1-2-2">1.2.2 Legendas (Pré-gravado)</a>
+        <a class="criterion-link" href="#criterio-1-2-3">1.2.3 Audiodescrição</a>
+        <a class="criterion-link" href="#criterio-1-2-4">1.2.4 Legendas (Ao Vivo)</a>
+        <a class="criterion-link" href="#criterio-1-2-5">1.2.5 Audiodescrição</a>
+        <a class="criterion-link" href="#criterio-1-2-6">1.2.6 Língua Gestual</a>
+        <a class="criterion-link" href="#criterio-1-2-7">1.2.7 Audiodescrição Estendida</a>
+        <a class="criterion-link" href="#criterio-1-2-8">1.2.8 Média Alternativa</a>
+        <a class="criterion-link" href="#criterio-1-2-9">1.2.9 Apenas Áudio (Ao Vivo)</a>
+        <a class="criterion-link" href="#criterio-1-3-1">1.3.1 Informação e Relações</a>
+        <a class="criterion-link" href="#criterio-1-3-2">1.3.2 Sequência Significativa</a>
+        <a class="criterion-link" href="#criterio-1-3-3">1.3.3 Características Sensoriais</a>
+        <a class="criterion-link" href="#criterio-1-3-4">1.3.4 Orientação</a>
+        <a class="criterion-link" href="#criterio-1-3-5">1.3.5 Propósito de Entrada</a>
+        <a class="criterion-link" href="#criterio-1-3-6">1.3.6 Propósito (AAA)</a>
+        <a class="criterion-link" href="#criterio-1-4-1">1.4.1 Uso de Cor</a>
+        <a class="criterion-link" href="#criterio-1-4-2">1.4.2 Controlo de Áudio</a>
+        <a class="criterion-link" href="#criterio-1-4-3">1.4.3 Contraste Mínimo</a>
+        <a class="criterion-link" href="#criterio-1-4-4">1.4.4 Redimensionar Texto</a>
+        <a class="criterion-link" href="#criterio-1-4-5">1.4.5 Imagens de Texto</a>
+        <a class="criterion-link" href="#criterio-1-4-6">1.4.6 Contraste Aprimorado</a>
+        <a class="criterion-link" href="#criterio-1-4-7">1.4.7 Fundo de Áudio Baixo</a>
+        <a class="criterion-link" href="#criterio-1-4-8">1.4.8 Apresentação Visual</a>
+        <a class="criterion-link" href="#criterio-1-4-9">1.4.9 Imagens de Texto (AAA)</a>
+        <a class="criterion-link" href="#criterio-1-4-10">1.4.10 Reflow</a>
+        <a class="criterion-link" href="#criterio-1-4-11">1.4.11 Contraste Não Textual</a>
+        <a class="criterion-link" href="#criterio-1-4-12">1.4.12 Espaçamento de Texto</a>
+        <a class="criterion-link" href="#criterio-1-4-13">1.4.13 Conteúdo ao Focar</a>
+
+        <!-- PRINCÍPIO 2 -->
+        <a class="subsection" href="#principio-2">Princípio 2 – Operável</a>
+        <a class="criterion-link" href="#criterio-2-1-1">2.1.1 Teclado</a>
+        <a class="criterion-link" href="#criterio-2-1-2">2.1.2 Sem Armadilhas</a>
+        <a class="criterion-link" href="#criterio-2-1-3">2.1.3 Teclado (AAA)</a>
+        <a class="criterion-link" href="#criterio-2-1-4">2.1.4 Atalhos</a>
+        <a class="criterion-link" href="#criterio-2-2-1">2.2.1 Tempo Ajustável</a>
+        <a class="criterion-link" href="#criterio-2-2-2">2.2.2 Pausar/Parar</a>
+        <a class="criterion-link" href="#criterio-2-2-3">2.2.3 Sem Limite</a>
+        <a class="criterion-link" href="#criterio-2-2-4">2.2.4 Interrupções</a>
+        <a class="criterion-link" href="#criterio-2-2-5">2.2.5 Reautenticação</a>
+        <a class="criterion-link" href="#criterio-2-2-6">2.2.6 Tempo de Ajuda</a>
+        <a class="criterion-link" href="#criterio-2-2-7">2.2.7 Inatividade</a>
+        <a class="criterion-link" href="#criterio-2-2-8">2.2.8 Sessão</a>
+        <a class="criterion-link" href="#criterio-2-3-1">2.3.1 Flashes</a>
+        <a class="criterion-link" href="#criterio-2-3-2">2.3.2 Flashes (AAA)</a>
+        <a class="criterion-link" href="#criterio-2-3-3">2.3.3 Animação</a>
+        <a class="criterion-link" href="#criterio-2-4-1">2.4.1 Ignorar Blocos</a>
+        <a class="criterion-link" href="#criterio-2-4-2">2.4.2 Título</a>
+        <a class="criterion-link" href="#criterio-2-4-3">2.4.3 Ordem de Foco</a>
+        <a class="criterion-link" href="#criterio-2-4-4">2.4.4 Propósito do Link</a>
+        <a class="criterion-link" href="#criterio-2-4-5">2.4.5 Localizar Conteúdo</a>
+        <a class="criterion-link" href="#criterio-2-4-6">2.4.6 Cabeçalhos</a>
+        <a class="criterion-link" href="#criterio-2-4-7">2.4.7 Foco Visível</a>
+        <a class="criterion-link" href="#criterio-2-4-8">2.4.8 Localização</a>
+        <a class="criterion-link" href="#criterio-2-4-9">2.4.9 Propósito (AAA)</a>
+        <a class="criterion-link" href="#criterio-2-4-10">2.4.10 Cabeçalhos Secção</a>
+        <a class="criterion-link" href="#criterio-2-4-11">2.4.11 Foco Não Obstruído</a>
+        <a class="criterion-link" href="#criterio-2-4-12">2.4.12 Foco Aprimorado</a>
+        <a class="criterion-link" href="#criterio-2-4-13">2.4.13 Aparência do Foco</a>
+
+        <!-- PRINCÍPIO 3 -->
+        <a class="subsection" href="#principio-3">Princípio 3 – Compreensível</a>
+        <a class="criterion-link" href="#criterio-3-1-1">3.1.1 Idioma da Página</a>
+        <a class="criterion-link" href="#criterio-3-1-2">3.1.2 Idioma das Partes</a>
+        <a class="criterion-link" href="#criterio-3-1-3">3.1.3 Nível de Leitura</a>
+        <a class="criterion-link" href="#criterio-3-1-4">3.1.4 Abreviações</a>
+        <a class="criterion-link" href="#criterio-3-1-5">3.1.5 Pronúncia</a>
+        <a class="criterion-link" href="#criterio-3-2-1">3.2.1 Ao Focar</a>
+        <a class="criterion-link" href="#criterio-3-2-2">3.2.2 Ao Introduzir Dados</a>
+        <a class="criterion-link" href="#criterio-3-2-3">3.2.3 Navegação Consistente</a>
+        <a class="criterion-link" href="#criterio-3-2-4">3.2.4 Identificação Consistente</a>
+        <a class="criterion-link" href="#criterio-3-2-5">3.2.5 Mudança ao Pedido</a>
+        <a class="criterion-link" href="#criterio-3-2-6">3.2.6 Ajuda Consistente</a>
+        <a class="criterion-link" href="#criterio-3-3-1">3.3.1 Identificação de Erros</a>
+        <a class="criterion-link" href="#criterio-3-3-2">3.3.2 Rótulos</a>
+        <a class="criterion-link" href="#criterio-3-3-3">3.3.3 Sugestão de Erros</a>
+        <a class="criterion-link" href="#criterio-3-3-4">3.3.4 Prevenção de Erros</a>
+        <a class="criterion-link" href="#criterio-3-3-5">3.3.5 Ajuda de Entrada</a>
+        <a class="criterion-link" href="#criterio-3-3-6">3.3.6 Prevenção (AAA)</a>
+        <a class="criterion-link" href="#criterio-3-3-7">3.3.7 Entrada Reduzida</a>
+        <a class="criterion-link" href="#criterio-3-3-8">3.3.8 Autenticação Acessível</a>
+
+        <!-- PRINCÍPIO 4 -->
+        <a class="subsection" href="#principio-4">Princípio 4 – Robusto</a>
+        <a class="criterion-link" href="#criterio-4-1-1">4.1.1 Análise</a>
+        <a class="criterion-link" href="#criterio-4-1-2">4.1.2 Nome, Função, Valor</a>
+        <a class="criterion-link" href="#criterio-4-1-3">4.1.3 Mensagens de Estado</a>
+    </aside>
+
+    <main>
+
+        <!-- CAPA -->
+        <header class="hero">
+            <h1>Relatório de Auditoria de Acessibilidade</h1>
+            <p>WCAG 2.2 – Níveis A, AA e AAA</p>
+        </header>
+
+        <!-- INFORMAÇÕES -->
+        <section id="info">
+            <h2>Informações da Auditoria</h2>
+            <ul>
+                <li><strong>Website auditado:</strong> Nome do Website</li>
+                <li><strong>Auditor:</strong> Nome do Auditor</li>
+                <li><strong>Data:</strong> DD/MM/AAAA</li>
+                <li><strong>Tipo de auditoria:</strong> Manual + Automática</li>
+                <li><strong>Navegadores:</strong> Chrome, Firefox, Safari</li>
+                <li><strong>Sistema Operacional:</strong> Windows / macOS</li>
+                <li><strong>Ferramentas:</strong> Axe DevTools, WAVE, Lighthouse, NVDA</li>
+            </ul>
+        </section>
+
+        <!-- RESUMO -->
+        <section id="summary">
+            <h2>Resumo Geral</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Total Critérios</th>
+                        <th>Aprovados</th>
+                        <th>Falhados</th>
+                        <th>Não aplicáveis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>87</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- CRITÉRIOS WCAG -->
+        <section id="criteria">
+            <h2>Critérios WCAG 2.2</h2>
+
+            <!-- ============================== -->
+<!-- PRÍNCIPIO 1 – PERCEPTÍVEL -->
+<!-- ============================== -->
+
+<h3 id="principio-1">Princípio 1 – Perceptível</h3>
+
+<div class="criterion" id="criterio-1-1-1">
+    <h4>1.1.1 – Conteúdo Não Textual (A)</h4>
+    <p><strong>Problema:</strong> Imagens, ícones ou gráficos sem texto alternativo.</p>
+    <p><strong>Importância:</strong> Pessoas cegas dependem do texto alternativo para compreender o conteúdo.</p>
+    <div class="links">
+        <a href="#issue-1-1-1-1">Issue #1 (1.1.1)</a>
+        <a href="#issue-1-1-1-2">Issue #2 (1.1.1)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-2-1">
+    <h4>1.2.1 – Áudio-only e Vídeo-only (Pré-gravado) (A)</h4>
+    <p><strong>Problema:</strong> Conteúdos apenas áudio ou apenas vídeo sem alternativa equivalente.</p>
+    <p><strong>Importância:</strong> Garante acesso a quem não vê ou não ouve o conteúdo.</p>
+    <div class="links">
+        <a href="#issue-1-2-1-1">Issue #1 (1.2.1)</a>
+        <a href="#issue-1-2-1-2">Issue #2 (1.2.1)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-2-2">
+    <h4>1.2.2 – Legendas (Pré-gravado) (A)</h4>
+    <p><strong>Problema:</strong> Vídeos com áudio sem legendas sincronizadas.</p>
+    <p><strong>Importância:</strong> Essencial para pessoas surdas ou com perda auditiva.</p>
+    <div class="links">
+        <a href="#issue-1-2-2-1">Issue #1 (1.2.2)</a>
+        <a href="#issue-1-2-2-2">Issue #2 (1.2.2)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-2-3">
+    <h4>1.2.3 – Audiodescrição ou Média Alternativa (Pré-gravado) (A)</h4>
+    <p><strong>Problema:</strong> Vídeos com informação visual importante sem audiodescrição.</p>
+    <p><strong>Importância:</strong> Pessoas cegas precisam de descrição do conteúdo visual.</p>
+    <div class="links">
+        <a href="#issue-1-2-3-1">Issue #1 (1.2.3)</a>
+        <a href="#issue-1-2-3-2">Issue #2 (1.2.3)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-2-4">
+    <h4>1.2.4 – Legendas (Ao Vivo) (AA)</h4>
+    <p><strong>Problema:</strong> Transmissões ao vivo sem legendas em tempo real.</p>
+    <p><strong>Importância:</strong> Permite que pessoas com deficiência auditiva acompanhem eventos ao vivo.</p>
+    <div class="links">
+        <a href="#issue-1-2-4-1">Issue #1 (1.2.4)</a>
+        <a href="#issue-1-2-4-2">Issue #2 (1.2.4)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-2-5">
+    <h4>1.2.5 – Audiodescrição (Pré-gravado) (AA)</h4>
+    <p><strong>Problema:</strong> Vídeos pré-gravados sem faixa de audiodescrição.</p>
+    <p><strong>Importância:</strong> Garante compreensão completa para utilizadores cegos.</p>
+    <div class="links">
+        <a href="#issue-1-2-5-1">Issue #1 (1.2.5)</a>
+        <a href="#issue-1-2-5-2">Issue #2 (1.2.5)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-2-6">
+    <h4>1.2.6 – Língua Gestual (Pré-gravado) (AAA)</h4>
+    <p><strong>Problema:</strong> Vídeos sem interpretação em língua gestual.</p>
+    <p><strong>Importância:</strong> Ajuda utilizadores que usam língua gestual como primeira língua.</p>
+    <div class="links">
+        <a href="#issue-1-2-6-1">Issue #1 (1.2.6)</a>
+        <a href="#issue-1-2-6-2">Issue #2 (1.2.6)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-2-7">
+    <h4>1.2.7 – Audiodescrição Estendida (Pré-gravado) (AAA)</h4>
+    <p><strong>Problema:</strong> Vídeos complexos sem pausas adicionais para audiodescrição.</p>
+    <p><strong>Importância:</strong> Permite descrever cenas densas sem perda de informação.</p>
+    <div class="links">
+        <a href="#issue-1-2-7-1">Issue #1 (1.2.7)</a>
+        <a href="#issue-1-2-7-2">Issue #2 (1.2.7)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-2-8">
+    <h4>1.2.8 – Média Alternativa (Pré-gravado) (AAA)</h4>
+    <p><strong>Problema:</strong> Conteúdos audiovisuais sem transcrição completa.</p>
+    <p><strong>Importância:</strong> Útil para quem prefere ler ou não consegue consumir multimédia.</p>
+    <div class="links">
+        <a href="#issue-1-2-8-1">Issue #1 (1.2.8)</a>
+        <a href="#issue-1-2-8-2">Issue #2 (1.2.8)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-2-9">
+    <h4>1.2.9 – Apenas Áudio (Ao Vivo) (AAA)</h4>
+    <p><strong>Problema:</strong> Conteúdos apenas áudio ao vivo sem alternativa em texto.</p>
+    <p><strong>Importância:</strong> Ajuda pessoas surdas a acompanhar transmissões.</p>
+    <div class="links">
+        <a href="#issue-1-2-9-1">Issue #1 (1.2.9)</a>
+        <a href="#issue-1-2-9-2">Issue #2 (1.2.9)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-3-1">
+    <h4>1.3.1 – Informação e Relações (A)</h4>
+    <p><strong>Problema:</strong> Estrutura visual sem semântica adequada.</p>
+    <p><strong>Importância:</strong> Leitores de ecrã dependem da semântica para navegação.</p>
+    <div class="links">
+        <a href="#issue-1-3-1-1">Issue #1 (1.3.1)</a>
+        <a href="#issue-1-3-1-2">Issue #2 (1.3.1)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-3-2">
+    <h4>1.3.2 – Sequência Significativa (A)</h4>
+    <p><strong>Problema:</strong> Ordem de leitura incoerente.</p>
+    <p><strong>Importância:</strong> Garante leitura lógica por teclado e leitores de ecrã.</p>
+    <div class="links">
+        <a href="#issue-1-3-2-1">Issue #1 (1.3.2)</a>
+        <a href="#issue-1-3-2-2">Issue #2 (1.3.2)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-3-3">
+    <h4>1.3.3 – Características Sensoriais (A)</h4>
+    <p><strong>Problema:</strong> Instruções dependem apenas de cor, forma ou posição.</p>
+    <p><strong>Importância:</strong> Pessoas com limitações sensoriais podem não compreender.</p>
+    <div class="links">
+        <a href="#issue-1-3-3-1">Issue #1 (1.3.3)</a>
+        <a href="#issue-1-3-3-2">Issue #2 (1.3.3)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-3-4">
+    <h4>1.3.4 – Orientação (AA)</h4>
+    <p><strong>Problema:</strong> Conteúdo bloqueado a uma única orientação.</p>
+    <p><strong>Importância:</strong> Ajuda utilizadores que fixam o dispositivo.</p>
+    <div class="links">
+        <a href="#issue-1-3-4-1">Issue #1 (1.3.4)</a>
+        <a href="#issue-1-3-4-2">Issue #2 (1.3.4)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-3-5">
+    <h4>1.3.5 – Identificação do Propósito de Entrada (AA)</h4>
+    <p><strong>Problema:</strong> Campos de dados pessoais sem semântica adequada.</p>
+    <p><strong>Importância:</strong> Permite preenchimento assistido.</p>
+    <div class="links">
+        <a href="#issue-1-3-5-1">Issue #1 (1.3.5)</a>
+        <a href="#issue-1-3-5-2">Issue #2 (1.3.5)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-3-6">
+    <h4>1.3.6 – Identificação do Propósito (AAA)</h4>
+    <p><strong>Problema:</strong> Componentes sem propósito programático.</p>
+    <p><strong>Importância:</strong> Facilita personalização e acessibilidade avançada.</p>
+    <div class="links">
+        <a href="#issue-1-3-6-1">Issue #1 (1.3.6)</a>
+        <a href="#issue-1-3-6-2">Issue #2 (1.3.6)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-4-1">
+    <h4>1.4.1 – Uso de Cor (A)</h4>
+    <p><strong>Problema:</strong> Informação transmitida apenas pela cor.</p>
+    <p><strong>Importância:</strong> Pessoas com daltonismo podem não distinguir cores.</p>
+    <div class="links">
+        <a href="#issue-1-4-1-1">Issue #1 (1.4.1)</a>
+        <a href="#issue-1-4-1-2">Issue #2 (1.4.1)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-4-2">
+    <h4>1.4.2 – Controlo de Áudio (A)</h4>
+    <p><strong>Problema:</strong> Áudio automático sem controlo.</p>
+    <p><strong>Importância:</strong> Pode interferir com leitores de ecrã.</p>
+    <div class="links">
+        <a href="#issue-1-4-2-1">Issue #1 (1.4.2)</a>
+        <a href="#issue-1-4-2-2">Issue #2 (1.4.2)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-4-3">
+    <h4>1.4.3 – Contraste (Mínimo) (AA)</h4>
+    <p><strong>Problema:</strong> Texto com contraste insuficiente.</p>
+    <p><strong>Importância:</strong> Essencial para pessoas com baixa visão.</p>
+    <div class="links">
+        <a href="#issue-1-4-3-1">Issue #1 (1.4.3)</a>
+        <a href="#issue-1-4-3-2">Issue #2 (1.4.3)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-4-4">
+    <h4>1.4.4 – Redimensionar Texto (AA)</h4>
+    <p><strong>Problema:</strong> Texto não pode ser ampliado sem quebra.</p>
+    <p><strong>Importância:</strong> Ajuda quem precisa de letras maiores.</p>
+    <div class="links">
+        <a href="#issue-1-4-4-1">Issue #1 (1.4.4)</a>
+        <a href="#issue-1-4-4-2">Issue #2 (1.4.4)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-4-5">
+    <h4>1.4.5 – Imagens de Texto (AA)</h4>
+    <p><strong>Problema:</strong> Uso de imagens contendo texto.</p>
+    <p><strong>Importância:</strong> Texto real é mais acessível e escalável.</p>
+    <div class="links">
+        <a href="#issue-1-4-5-1">Issue #1 (1.4.5)</a>
+        <a href="#issue-1-4-5-2">Issue #2 (1.4.5)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-4-6">
+    <h4>1.4.6 – Contraste (Aprimorado) (AAA)</h4>
+    <p><strong>Problema:</strong> Contraste insuficiente para utilizadores com visão muito reduzida.</p>
+    <p><strong>Importância:</strong> Melhora legibilidade em condições extremas.</p>
+    <div class="links">
+        <a href="#issue-1-4-6-1">Issue #1 (1.4.6)</a>
+        <a href="#issue-1-4-6-2">Issue #2 (1.4.6)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-4-7">
+    <h4>1.4.7 – Fundo de Áudio Baixo (AAA)</h4>
+    <p><strong>Problema:</strong> Fala sobre fundo sonoro alto.</p>
+    <p><strong>Importância:</strong> Pessoas com perda auditiva precisam de clareza.</p>
+    <div class="links">
+        <a href="#issue-1-4-7-1">Issue #1 (1.4.7)</a>
+        <a href="#issue-1-4-7-2">Issue #2 (1.4.7)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-4-8">
+    <h4>1.4.8 – Apresentação Visual (AAA)</h4>
+    <p><strong>Problema:</strong> Falta de controlo sobre espaçamento e cores.</p>
+    <p><strong>Importância:</strong> Ajuda utilizadores com dificuldades de leitura.</p>
+    <div class="links">
+        <a href="#issue-1-4-8-1">Issue #1 (1.4.8)</a>
+        <a href="#issue-1-4-8-2">Issue #2 (1.4.8)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-4-9">
+    <h4>1.4.9 – Imagens de Texto (Sem Exceções) (AAA)</h4>
+    <p><strong>Problema:</strong> Uso de imagens de texto sem necessidade.</p>
+    <p><strong>Importância:</strong> Maximiza acessibilidade textual.</p>
+    <div class="links">
+        <a href="#issue-1-4-9-1">Issue #1 (1.4.9)</a>
+        <a href="#issue-1-4-9-2">Issue #2 (1.4.9)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-1-4-10">
+    <h4>1.4.10 – Reflow (AA)</h4>
+    <p><strong>Problema:</strong> Scroll horizontal necessário
+    <div class="links">
+        <a href="#issue-1-4-10-1">Issue #1 (1.4.10)</a>
+        <a href="#issue-1-4-10-2">Issue #2 (1.4.10)</a>
+    </div>
+</div>
+    <!-- ============================== -->
+<!-- PRÍNCIPIO 3 – COMPREENSÍVEL -->
+<!-- ============================== -->
+
+<h3 id="principio-3">Princípio 3 – Compreensível</h3>
+
+<div class="criterion" id="criterio-3-1-1">
+    <h4>3.1.1 – Idioma da Página (A)</h4>
+    <p><strong>Problema:</strong> Idioma principal não definido no código.</p>
+    <p><strong>Importância:</strong> Leitores de ecrã usam esta informação para pronúncia correta.</p>
+    <div class="links">
+        <a href="#issue-3-1-1-1">Issue #1 (3.1.1)</a>
+        <a href="#issue-3-1-1-2">Issue #2 (3.1.1)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-1-2">
+    <h4>3.1.2 – Idioma das Partes (AA)</h4>
+    <p><strong>Problema:</strong> Trechos em outro idioma sem marcação adequada.</p>
+    <p><strong>Importância:</strong> Evita pronúncia incorreta e confusão.</p>
+    <div class="links">
+        <a href="#issue-3-1-2-1">Issue #1 (3.1.2)</a>
+        <a href="#issue-3-1-2-2">Issue #2 (3.1.2)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-1-3">
+    <h4>3.1.3 – Nível de Leitura (AAA)</h4>
+    <p><strong>Problema:</strong> Texto complexo sem versão simplificada.</p>
+    <p><strong>Importância:</strong> Ajuda pessoas com dificuldades de leitura.</p>
+    <div class="links">
+        <a href="#issue-3-1-3-1">Issue #1 (3.1.3)</a>
+        <a href="#issue-3-1-3-2">Issue #2 (3.1.3)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-1-4">
+    <h4>3.1.4 – Abreviações (AAA)</h4>
+    <p><strong>Problema:</strong> Abreviações sem explicação.</p>
+    <p><strong>Importância:</strong> Evita mal-entendidos em textos técnicos.</p>
+    <div class="links">
+        <a href="#issue-3-1-4-1">Issue #1 (3.1.4)</a>
+        <a href="#issue-3-1-4-2">Issue #2 (3.1.4)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-1-5">
+    <h4>3.1.5 – Pronúncia (AAA)</h4>
+    <p><strong>Problema:</strong> Palavras ambíguas sem indicação de pronúncia.</p>
+    <p><strong>Importância:</strong> Ajuda na compreensão de termos específicos.</p>
+    <div class="links">
+        <a href="#issue-3-1-5-1">Issue #1 (3.1.5)</a>
+        <a href="#issue-3-1-5-2">Issue #2 (3.1.5)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-2-1">
+    <h4>3.2.1 – Ao Focar (A)</h4>
+    <p><strong>Problema:</strong> Receber foco provoca mudanças inesperadas.</p>
+    <p><strong>Importância:</strong> Evita surpresas ao navegar por teclado.</p>
+    <div class="links">
+        <a href="#issue-3-2-1-1">Issue #1 (3.2.1)</a>
+        <a href="#issue-3-2-1-2">Issue #2 (3.2.1)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-2-2">
+    <h4>3.2.2 – Ao Introduzir Dados (A)</h4>
+    <p><strong>Problema:</strong> Alterar um valor muda o contexto sem aviso.</p>
+    <p><strong>Importância:</strong> Reduz erros e perda de orientação.</p>
+    <div class="links">
+        <a href="#issue-3-2-2-1">Issue #1 (3.2.2)</a>
+        <a href="#issue-3-2-2-2">Issue #2 (3.2.2)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-2-3">
+    <h4>3.2.3 – Navegação Consistente (AA)</h4>
+    <p><strong>Problema:</strong> Navegação muda de ordem entre páginas.</p>
+    <p><strong>Importância:</strong> Facilita aprendizagem do layout.</p>
+    <div class="links">
+        <a href="#issue-3-2-3-1">Issue #1 (3.2.3)</a>
+        <a href="#issue-3-2-3-2">Issue #2 (3.2.3)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-2-4">
+    <h4>3.2.4 – Identificação Consistente (AA)</h4>
+    <p><strong>Problema:</strong> Elementos iguais identificados de forma diferente.</p>
+    <p><strong>Importância:</strong> Evita confusão e erros.</p>
+    <div class="links">
+        <a href="#issue-3-2-4-1">Issue #1 (3.2.4)</a>
+        <a href="#issue-3-2-4-2">Issue #2 (3.2.4)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-2-5">
+    <h4>3.2.5 – Mudança ao Pedido do Utilizador (AAA)</h4>
+    <p><strong>Problema:</strong> Mudanças automáticas sem ação explícita.</p>
+    <p><strong>Importância:</strong> Dá controlo total ao utilizador.</p>
+    <div class="links">
+        <a href="#issue-3-2-5-1">Issue #1 (3.2.5)</a>
+        <a href="#issue-3-2-5-2">Issue #2 (3.2.5)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-2-6">
+    <h4>3.2.6 – Ajuda Consistente (A)</h4>
+    <p><strong>Problema:</strong> Mecanismos de ajuda aparecem em locais diferentes.</p>
+    <p><strong>Importância:</strong> Facilita encontrar suporte rapidamente.</p>
+    <div class="links">
+        <a href="#issue-3-2-6-1">Issue #1 (3.2.6)</a>
+        <a href="#issue-3-2-6-2">Issue #2 (3.2.6)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-3-1">
+    <h4>3.3.1 – Identificação de Erros (A)</h4>
+    <p><strong>Problema:</strong> Erros não são claramente indicados.</p>
+    <p><strong>Importância:</strong> Ajuda a corrigir rapidamente.</p>
+    <div class="links">
+        <a href="#issue-3-3-1-1">Issue #1 (3.3.1)</a>
+        <a href="#issue-3-3-1-2">Issue #2 (3.3.1)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-3-2">
+    <h4>3.3.2 – Rótulos ou Instruções (A)</h4>
+    <p><strong>Problema:</strong> Campos sem rótulos claros.</p>
+    <p><strong>Importância:</strong> Reduz erros de preenchimento.</p>
+    <div class="links">
+        <a href="#issue-3-3-2-1">Issue #1 (3.3.2)</a>
+        <a href="#issue-3-3-2-2">Issue #2 (3.3.2)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-3-3">
+    <h4>3.3.3 – Sugestão de Erros (AA)</h4>
+    <p><strong>Problema:</strong> Erros sem sugestões de correção.</p>
+    <p><strong>Importância:</strong> Ajuda utilizadores com dificuldades cognitivas.</p>
+    <div class="links">
+        <a href="#issue-3-3-3-1">Issue #1 (3.3.3)</a>
+        <a href="#issue-3-3-3-2">Issue #2 (3.3.3)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-3-4">
+    <h4>3.3.4 – Prevenção de Erros (Legal, Financeiro, Dados) (AA)</h4>
+    <p><strong>Problema:</strong> Ações críticas sem revisão ou confirmação.</p>
+    <p><strong>Importância:</strong> Evita consequências graves por engano.</p>
+    <div class="links">
+        <a href="#issue-3-3-4-1">Issue #1 (3.3.4)</a>
+        <a href="#issue-3-3-4-2">Issue #2 (3.3.4)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-3-5">
+    <h4>3.3.5 – Ajuda de Entrada (AAA)</h4>
+    <p><strong>Problema:</strong> Falta de ajuda adicional em formulários complexos.</p>
+    <p><strong>Importância:</strong> Ajuda quem tem dificuldades de compreensão.</p>
+    <div class="links">
+        <a href="#issue-3-3-5-1">Issue #1 (3.3.5)</a>
+        <a href="#issue-3-3-5-2">Issue #2 (3.3.5)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-3-6">
+    <h4>3.3.6 – Prevenção de Erros (Todos) (AAA)</h4>
+    <p><strong>Problema:</strong> Falta de mecanismos de prevenção de erros.</p>
+    <p><strong>Importância:</strong> Minimiza erros em qualquer contexto.</p>
+    <div class="links">
+        <a href="#issue-3-3-6-1">Issue #1 (3.3.6)</a>
+        <a href="#issue-3-3-6-2">Issue #2 (3.3.6)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-3-7">
+    <h4>3.3.7 – Entrada Reduzida (A)</h4>
+    <p><strong>Problema:</strong> Formulários exigem demasiada escrita manual.</p>
+    <p><strong>Importância:</strong> Reduz esforço e erros.</p>
+    <div class="links">
+        <a href="#issue-3-3-7-1">Issue #1 (3.3.7)</a>
+        <a href="#issue-3-3-7-2">Issue #2 (3.3.7)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-3-3-8">
+    <h4>3.3.8 – Autenticação Acessível (AA)</h4>
+    <p><strong>Problema:</strong> Autenticação baseada apenas em memória.</p>
+    <p><strong>Importância:</strong> Ajuda utilizadores com dificuldades cognitivas.</p>
+    <div class="links">
+        <a href="#issue-3-3-8-1">Issue #1 (3.3.8)</a>
+        <a href="#issue-3-3-8-2">Issue #2 (3.3.8)</a>
+    </div>
+</div>
+
+<!-- ============================== -->
+<!-- PRÍNCIPIO 4 – ROBUSTO -->
+<!-- ============================== -->
+
+<h3 id="principio-4">Princípio 4 – Robusto</h3>
+
+<div class="criterion" id="criterio-4-1-1">
+    <h4>4.1.1 – Análise (A)</h4>
+    <p><strong>Problema:</strong> Erros de código como tags não fechadas ou IDs duplicados.</p>
+    <p><strong>Importância:</strong> Garante que tecnologias de apoio interpretem corretamente o conteúdo.</p>
+    <div class="links">
+        <a href="#issue-4-1-1-1">Issue #1 (4.1.1)</a>
+        <a href="#issue-4-1-1-2">Issue #2 (4.1.1)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-4-1-2">
+    <h4>4.1.2 – Nome, Função, Valor (A)</h4>
+    <p><strong>Problema:</strong> Componentes sem nome, função ou estado expostos programaticamente.</p>
+    <p><strong>Importância:</strong> Essencial para leitores de ecrã.</p>
+    <div class="links">
+        <a href="#issue-4-1-2-1">Issue #1 (4.1.2)</a>
+        <a href="#issue-4-1-2-2">Issue #2 (4.1.2)</a>
+    </div>
+</div>
+
+<div class="criterion" id="criterio-4-1-3">
+    <h4>4.1.3 – Mensagens de Estado (AA)</h4>
+    <p><strong>Problema:</strong> Mensagens importantes não são anunciadas a leitores de ecrã.</p>
+    <p><strong>Importância:</strong> Ajuda utilizadores cegos a perceber mudanças sem perder o foco.</p>
+    <div class="links">
+        <a href="#issue-4-1-3-1">Issue #1 (4.1.3)</a>
+        <a href="#issue-4-1-3-2">Issue #2 (4.1.3)</a>
+    </div>
+</div>
+
+        </section>
+
+    </main>
+           <footer class="footer">
+            © Hyphen
+        </footer>
+
+    <script src="assets/script.js"></script>
+
+</body>
+</html>
